@@ -1,3 +1,3 @@
-export function Display() {
-  return <input type="textfield" value="" autocomplete="off" readonly />;
+export function Display({ value }) {
+  return <input type="textfield" value={value} autocomplete="off" readonly />;
 }

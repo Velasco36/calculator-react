@@ -1,12 +1,19 @@
-import './style.css';
+import "./style.css";
 
-export function Button({ value, color, zeroOptional = false }) {
-  const classZero = zeroOptional ? 'zero' : '';
+export function Button({
+  value,
+  color = "",
+  handleClick,
+  zeroOptional = false,
+}) {
+  const className = `cal-button ${color} ${zeroOptional ? "zero" : ""}`;
   return (
     <input
       type="button"
       value={value}
-      class={`${color} cal-button ${classZero}`}
+      class={className.trim()}
+      onKeyDown={(e) => e.target.blur()}
+      onClick={() => handleClick(value)}
     />
   );
 }
