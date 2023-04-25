@@ -1,3 +1,3 @@
 export function Display({ value }) {
-  return <input type="textfield" value={value} autocomplete="off" readonly />;
+  return <input type="textfield" value={value} onChange={(event) => event} />;
 }
