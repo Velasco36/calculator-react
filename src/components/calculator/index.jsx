@@ -36,7 +36,7 @@ export function Calculator() {
   }
 
   return (
-    <div id="calculator">
+    <div id="calculator" className="box">
       <div id="body">
         <Display value={display} />
         <InputDisplay handleInput={(input) => operation(input)} />
